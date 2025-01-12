@@ -1,0 +1,149 @@
+body {
+    background-color: white;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+.cbox {
+    position: relative;
+    width: 25vw;
+    height: 35vw;
+    background: black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cbox:hover {
+    transform: translateY(-5px);
+}
+
+#im {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+    background: black;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-top: 2vw;
+}
+
+.cta span {
+    color: white;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    letter-spacing: 0.2vw;
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.cta svg {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        gap: 3vw;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5vw;
+    }
+
+    .box {
+        flex-direction: row;
+        gap: 3vw;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cbox {
+        width: 40vw;
+        height: 35vh;
+        margin: 0 1vw;
+    }
+
+    #im {
+        height: 70%;
+        width: 100%;
+    }
+
+    .cta span {
+        font-size: 2vw;
+        margin-top: 1vw;
+    }
+}
+
+
+.color-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, rgb(43, 213, 255) 0%, rgb(0, 157, 255) 100%);
+    border-radius: 20px;
+    border: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(43, 213, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.color-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(43, 213, 255, 0.3);
+}
